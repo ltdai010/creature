@@ -14,6 +14,6 @@
 	<img src="mammals.jpg" class="chooseButton" id="mammal">
 	<img src="insects.jpg" class="chooseButton" id="insect">
 	<img src="fish.jpg" class="chooseButton" id="fish">
-	<img src="bird.jpg" class="chooseButton" id="bird"> -->
+	<img src="bird.jpg" class="chooseButton" id="bird"> 
 </body>
 </html>
