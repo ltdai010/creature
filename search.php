@@ -81,6 +81,9 @@
 			}
 			else
 			echo 'No results found. Please search something else.';
+		}else
+		{
+			echo " ";
 		}
 	?>
 </body>
