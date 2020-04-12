@@ -12,7 +12,7 @@
 			$key = trim($_GET['key']);
 
 			// create a base query and words string
-			$query_string = "SELECT * FROM products WHERE ";
+			$query_string = "SELECT * FROM creature WHERE ";
 			$display_words = "";
 
 			// seperate each of the productLine
@@ -41,8 +41,7 @@
 				// display all the search results to the user
 				while ($row = mysqli_fetch_assoc($query)){
 								
-					echo "id: " . $row["productCode"]. " - Name: " . $row["productName"]. " "
-            . $row["productLine"]. "<br>";
+					echo "Tên: " . $row["name"]. " -Lớp: " . $row["class"]. "<br>";
 				}
 
 				echo '</table>';
