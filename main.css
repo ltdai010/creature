@@ -36,26 +36,31 @@ input[type="submit"]
 }
 
 #boSat{
+  background: url('bosat.jpg');
   top: 80%;
   left:10%;
 }
 
 #mammal{
+  background: url('mammals.jpg');
   top: 80%;
   left: 30%;
 }
 
 #insect{
+  background: url('insects.jpg');
   top: 80%;
   left: 50%;
 }
 
 #fish{
+  background: url(fish.jpg);
   top: 80%;
   left: 70%;
 }
 
 #bird{
+  background: url('bird.jpg');
   top: 80%;
   left: 90%;
 }
