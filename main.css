@@ -31,8 +31,9 @@ input[type="submit"]
   position: absolute;
   height: 120pt;
   width: 120pt;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 #boSat{
