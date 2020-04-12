@@ -48,8 +48,40 @@
 			else
 			echo 'No results found. Please search something else.';
 		}
-		else
-		echo '';
+		else if(isset($_GET['class']) && $_GET['class'] != '')
+		{
+			// save the keywords from the url
+			$class = trim($_GET['class']);
+
+			// create a base query and words string
+			$query_string = "SELECT * FROM creature WHERE class LIKE".$class;
+
+
+			// connect to the database
+
+			$query = mysqli_query($link, $query_string);
+			$result_count = mysqli_num_rows($query);
+
+			// check to see if any results were returned
+			if ($result_count > 0){
+							
+				// display search result count to user
+				echo '<br /><div class="right"><b><u>'.$result_count.'</u></b> results found</div>';
+				echo 'Your search for <i>'.$class.'</i> <hr /><br />';
+
+				echo '<table class="search">';
+
+				// display all the search results to the user
+				while ($row = mysqli_fetch_assoc($query)){
+								
+					echo "Tên: " . $row["name"]. " -Lớp: " . $row["class"]. "<br>";
+				}
+
+				echo '</table>';
+			}
+			else
+			echo 'No results found. Please search something else.';
+		}
 	?>
 </body>
 </html>

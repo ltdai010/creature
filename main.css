@@ -26,43 +26,38 @@ input[type="submit"]
 
 .chooseButton{
   display: block;
-  border: 1px solid #ccc;
   margin: 0;
+  padding: 0;
   position: absolute;
   height: 120pt;
   width: 120pt;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
+  top: 70%;
 }
 
 #boSat{
-  background: url('bosat.jpg');
-  top: 80%;
-  left:10%;
+  background-image: url('bosat.jpg');
+  left:5%;
 }
 
 #mammal{
-  background: url('mammals.jpg');
-  top: 80%;
-  left: 30%;
+  background-image: url('mammals.jpg');
+  left: 25%;
 }
 
 #insect{
-  background: url('insects.jpg');
-  top: 80%;
-  left: 50%;
+  background-image: url('insects.jpg');
+  left: 45%;
 }
 
 #fish{
-  background: url(fish.jpg);
-  top: 80%;
-  left: 70%;
+  background-image: url(fish.jpg);
+  left: 65%;
 }
 
 #bird{
-  background: url('bird.jpg');
-  top: 80%;
-  left: 90%;
+  background-image: url('bird.jpg');
+  left: 85%;
 }
