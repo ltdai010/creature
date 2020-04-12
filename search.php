@@ -15,10 +15,10 @@
 			$query_string = "SELECT * FROM creature WHERE ";
 			$display_words = "";
 
-			// seperate each of the productLine
-			$productLine = explode(' ', $key); 
-			foreach($productLine as $word){
-				$query_string .= " productLine LIKE '%".$word."%' OR ";
+			// seperate each of the name
+			$name = explode(' ', $key); 
+			foreach($name as $word){
+				$query_string .= " name LIKE '%".$word."%' OR ";
 				$display_words .= $word." ";
 			}
 			$query_string = substr($query_string, 0, strlen($query_string) - 3);
