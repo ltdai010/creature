@@ -24,9 +24,8 @@
 			$query_string = substr($query_string, 0, strlen($query_string) - 3);
 
 			// connect to the database
-			$conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
-			$query = mysqli_query($conn, $query_string);
+			$query = mysqli_query($link, $query_string);
 			$result_count = mysqli_num_rows($query);
 
 			// check to see if any results were returned
