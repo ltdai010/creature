@@ -10,7 +10,6 @@
 		<input type="text" name = "key" placeholder="Search.."/>
 		<input type="submit" value="Search"/>
 	</form>
-	<button></button>
 	<img src="bosat.jpg" class="chooseButton" id="boSat">
 	<img src="mammals.jpg" class="chooseButton" id="mammal">
 	<img src="insects.jpg" class="chooseButton" id="insect">
