@@ -51,10 +51,10 @@
 		else if(isset($_GET['class']) && $_GET['class'] != '')
 		{
 			// save the keywords from the url
-			$class = trim($_GET['class']);
+			$class = $_GET['class'];
 
 			// create a base query and words string
-			$query_string = "SELECT * FROM creature WHERE class LIKE".$class;
+			$query_string = "SELECT * FROM creature WHERE class LIKE'".$class."'";
 
 
 			// connect to the database
