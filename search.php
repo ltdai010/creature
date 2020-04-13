@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Creature</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+	<form action="search.php" method="get">
+		<input type="text" class="search" id="secondSearch" name = "key" placeholder="Search.."/>
+		<input type="submit" value="Search"/>
+	</form>
+
 	<?php
 		require_once "config.php";
 		if (isset($_GET['key']) && $_GET['key'] != ''){
@@ -40,8 +47,11 @@
 				// display all the search results to the user
 				while ($row = mysqli_fetch_assoc($query)){
 								
-					echo "Tên: " . $row["name"]. " -Lớp: " . $row["class"]. "<br>";
-					echo "<img src="$row["imageLink"]">";
+					echo "<div class="."'searchResult'"."><a href='detail.php?id=".$row["ID"]."'>Tên: " . $row["name"]. "</a>-Lớp: " . $row["class"]. "<br>";
+					echo "<img class='". "searchImage". "'src='". $row["imageLink"] ."'>";
+					$prepage = substr($row["identifyingCharacteristic"], 0, 1000);
+					$prepage .= "...";
+					echo "$prepage"."<br></div>";
 				}
 
 				echo '</table>';
@@ -75,8 +85,11 @@
 				// display all the search results to the user
 				while ($row = mysqli_fetch_assoc($query)){
 								
-					echo "Tên: " . $row["name"]. " -Lớp: " . $row["class"]. "<br>";
-					echo "<img src="$row["imageLink"]">";
+					echo "<div class="."'searchResult'"."><a href='detail.php?id=".$row["ID"]."'>Tên: " . $row["name"]. "</a>-Lớp: " . $row["class"]. "<br>";
+					echo "<img class='". "searchImage". "'src='". $row["imageLink"] ."'>";
+					$prepage = substr($row["identifyingCharacteristic"], 0, 1000);
+					$prepage .= "...";
+					echo "$prepage"."<br></div>";
 				}
 
 				echo '</table>';

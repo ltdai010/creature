@@ -5,9 +5,9 @@
 	<title>Creature</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body>
+<body id="main">
 	<form action="search.php" method="get">
-		<input type="text" name = "key" placeholder="Search.."/>
+		<input type="text" class="search" id="mainSearch" name = "key" placeholder="Search.."/>
 		<input type="submit" value="Search"/>
 	</form>
 	<form action="search.php" method="get">
@@ -17,5 +17,6 @@
 		<button class="chooseButton" name="class" id="fish" value="Cá" type="submit"></button>
 		<button class="chooseButton" name="class" id="bird" value="Chim" type="submit"></button>
 	</form>
+
 </body>
 </html>

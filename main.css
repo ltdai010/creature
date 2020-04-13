@@ -1,11 +1,21 @@
 body{
+
+}
+
+#infoPage{
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#main{
   background-image: url('CREATURE.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-
-input[type="text"]{
+.search{
   float: center;
   display: block;
   font-size: 36px;
@@ -13,15 +23,39 @@ input[type="text"]{
   border: solid #6a6b6e;
   margin: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+
+
+#secondSearch{
+  top:5%;
+  left: 50%;
+}
+
+#mainSearch{
+  top: 50%;
+  left: 50%;
 }
 
 input[type="submit"]
 {
   visibility: hidden;
+}
+
+.searchResult{
+  display: inline-block;
+  border-style: solid;
+  border-color: #838891;
+  margin: 20pt;
+}
+
+.searchImage{
+  float: left;
+  height: 150pt;
+  width: auto;
+  margin: 10pt;
 }
 
 .chooseButton{
@@ -61,3 +95,39 @@ input[type="submit"]
   background-image: url('bird.jpg');
   left: 85%;
 }
+
+#detailTop{
+  position: absolute;
+  font-family: 'Arial';
+  font-size: 20pt;
+  top:10%;
+  margin:50pt; 
+  margin-left: 100pt;
+  margin-right: 100pt; 
+}
+
+#detailImage{
+  float: left;
+  height: 150pt;
+  width:auto;
+  margin-right: 20pt;
+}
+
+#content{
+  font-size: 16pt;
+  font-family: 'Arial';
+  position: absolute;
+  margin: 50pt;
+  margin-left: 100pt;
+  margin-right: 100pt; 
+  top:45%;
+}
+
+#mainInfoPage{
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 15%;
+}
+
+
