@@ -41,6 +41,7 @@
 				while ($row = mysqli_fetch_assoc($query)){
 								
 					echo "Tên: " . $row["name"]. " -Lớp: " . $row["class"]. "<br>";
+					echo "<img src="$row["imageLink"]">"
 				}
 
 				echo '</table>';
