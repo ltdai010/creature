@@ -222,7 +222,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <br>
         <div>
            <input type="submit" value="Hoàn thành">
-           <button value="Về trang chủ" onclick="window.location.href='index.php'"></button> 
+           <input type="button" value="Về trang chủ" onclick="window.location.href='index.php'">
         </div>
     </form>
 
