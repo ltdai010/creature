@@ -2,6 +2,34 @@ body{
 
 }
 
+*{
+  font-family: 'Arial'
+}
+
+#class_container{
+  position: absolute;
+  top: 9%;
+  left: 46%;
+}
+
+#account{
+  background-image: url('account.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  float: right;
+  height: 50pt;
+  width: 50pt;
+}
+
+#account_container{
+  border: 1pt solid #a19c9c;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+
 #infoPage{
   background-image: url(background.jpg);
   background-repeat: no-repeat;
@@ -39,7 +67,7 @@ body{
   left: 50%;
 }
 
-input[type="submit"]
+#submit_search
 {
   visibility: hidden;
 }
@@ -129,5 +157,11 @@ input[type="submit"]
   height: 100%;
   left: 15%;
 }
+
+#login_form{
+  text-align: center;
+}
+
+
 
 
