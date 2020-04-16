@@ -104,7 +104,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
         if ($uploadOk == 0) {
@@ -223,6 +222,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <br>
         <div>
            <input type="submit" value="Hoàn thành">
+           <input type="back" value="Về trang chủ" onclick="window.location.href='index.php'">
         </div>
     </form>
 
