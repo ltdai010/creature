@@ -25,6 +25,7 @@ body{
 #account_container{
   border: 1pt solid #a19c9c;
   position: absolute;
+  background-color: white;
   top: 5%;
   right: 5%;
 }

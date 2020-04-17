@@ -34,7 +34,7 @@ if(!isset($_SESSION["creature_loggedin"]) || $_SESSION["creature_loggedin"] !== 
         </div>
         <br>
         <div>
-            <a href="logout.php">Sign Out of Your Account</a>
+            <a href="logout.php">Đăng xuất</a>
         </div>  
     </p>
 

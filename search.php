@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 	session_start();
  ?>
 <!DOCTYPE html>
@@ -43,12 +43,12 @@
 		{
 			// save the class from the url
 			$class = trim($_GET['class']);
-			$class = preg_replace('/[^A-Za-z0-9 ]/', '', $class);
+			$class = preg_replace('/([^\pL\.\ ]+)/u', '', $class);
 			if (isset($_GET['key']) && $_GET['key'] != ''){
 						
 				// save the keywords from the url
 				$key = trim($_GET['key']);
-				$key = preg_replace('/[^A-Za-z0-9 ]/', '', $key);
+				$key = preg_replace('/([^\pL\.\ ]+)/u', '', $key);
 
 				// create a base query and words string
 				$query_string = "SELECT * FROM creature WHERE class ='".$class."' AND";
@@ -127,7 +127,7 @@
 						
 				// save the keywords from the url
 				$key = trim($_GET['key']);
-				$key = preg_replace('/[^A-Za-z0-9 ]/', '', $key);
+				$key = preg_replace('/([^\pL\.\ ]+)/u', '', $key);
 				// create a base query and words string
 				$query_string = "SELECT * FROM creature WHERE ";
 				$display_words = "";
