@@ -133,11 +133,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($name_err) && empty($identifyingCharacteristic_err) && empty($biologicalCharacteristic_err) && empty($habitat_err) && empty($worth_err) && empty($status_err) && empty($image_err) && empty($class_err)){
         // Prepare a select statement
         // Prepare an insert statement
-        $sql = "INSERT INTO creature (name, identifyingCharacteristic, biologicalCharacteristic, habitat, worth, status, imageLink, class) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO creature (name, identifyingCharacteristic, biologicalCharacteristic, habitat, worth, status, imageLink, class, author) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssssssss", $param_name, $param_identifyingCharacteristic, $param_biologicalCharacteristic, $param_habitat, $param_worth, $param_status, $param_imageLink, $param_class);
+            mysqli_stmt_bind_param($stmt, "sssssssss", $param_name, $param_identifyingCharacteristic, $param_biologicalCharacteristic, $param_habitat, $param_worth, $param_status, $param_imageLink, $param_class, $param_author);
             
             // Set parameters
             $param_name = $name;
@@ -148,6 +148,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_status = $status;
             $param_imageLink = $image;
             $param_class = $class;
+            $param_author = $_SESSION["creature_username"];
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page

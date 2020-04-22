@@ -12,6 +12,25 @@ body{
   left: 46%;
 }
 
+.vote{
+  width: 50pt; 
+  height: 50pt;
+}
+
+#upvote{
+  background-image: url('upvote.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#downvote{
+  background-image: url('downvote.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 #account{
   background-image: url('account.png');
   background-repeat: no-repeat;

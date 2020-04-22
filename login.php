@@ -96,8 +96,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="main.css">
 </head>
 <body style="background-color: #bababa">
-    <h1 style="text-align: center;">Login</h2>
-    <p style="text-align: center">Please fill in your credentials to login.</p>
+    <h1 style="text-align: center;">Đăng nhập</h2>
+    <p style="text-align: center">Điền thông tin</p>
     <form id="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div>
             <label for="username">Username</label>
@@ -111,9 +111,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div><?php echo $password_err; ?></div>
         </div>
         <div>
-           <input type="submit" class="btn btn-primary" value="Login">
+           <input type="submit" class="btn btn-primary" value="Đăng nhập">
         </div>
-        <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+        <p>Chưa có tài khoản?<a href="register.php">Đăng ký ngay</a>.</p>
     </form>
 
 </body>

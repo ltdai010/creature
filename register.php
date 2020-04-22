@@ -12,7 +12,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate username
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a username.";
-    } else{
+    } 
+    else if(trim($_POST["username"]) == 'admin')
+    {
+        $username_err = "not permited"
+    }
+    else
+    {
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE username = ?";
         
