@@ -1,0 +1,5 @@
+Trang web creature nhằm mục đích lưu trữ, cung cấp thông tin về các loài sinh vật tại Việt Nam, 
+đặc biệt là các loài sinh vật hiếm. 
+Thông tin lưu trữ có thể dễ dàng được tìm kiếm, người dùng có thể tạo tài khoản và đưa lên thông
+tin về các loài sinh vật mới, đồng thời đánh giá tính chính xác của bài viết. Nếu bài viết có 
+nhiều đánh giá không tốt sẽ bị loại bỏ.

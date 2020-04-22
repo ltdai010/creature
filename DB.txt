@@ -1,0 +1,21 @@
+Cơ sở dữ liệu gồm 5 bảng:
+
+bảng class gồm 2 trường: class và description.
+Lưu trữ lớp và mô tả lớp sinh vật, class là khoá chính
+
+bảng creature gồm 10 trường: ID, name, identifyingCharacteristic, biologicalCharacteristic,
+habitat, worth, status, imageLink, class, author.
+Lưu trữ thông tin sinh vật, id là khoá chính, class là khoá ngoại liên kết với trường class ở bảng class.
+
+bảng creaturereview gồm 3 trường: ID, upvote, downvote
+lưu trữ đánh giá về bài đăng. 
+ID là khoá chính và liên kết khoá ngoại với id của bảng creature
+
+bảng users gồm 5 trường: id, username, password, email, phonenumber
+lưu trữ thông tin người dùng.
+ID là khoá chính
+
+bảng vote gồm 3 trường: post_id, user_id và vote
+lưu trữ thông tin đánh giá của người đăng và bài viết được đánh giá
+post_id liên kết khoá ngoại đến trường id của bảng creature
+user_id liên kết khoá ngoại đến trường id của bảng users
