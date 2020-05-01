@@ -77,23 +77,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Creature</title>
     <link rel="stylesheet" href=".main.css">
 </head>
-<body>
-    <h1>Reset Password</h1>
-    <p>Please fill out this form to reset your password.</p>
+<body  style="background-color: #bababa">
+    <h1>Đổi mật khẩu</h1>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
         <div >
-            <label>New Password</label>
+            <label style="float: left; width: 15%;" for="password">Mật khẩu mới</label>
             <input type="password" name="new_password"  value="<?php echo $new_password; ?>">
             <span><?php echo $new_password_err; ?></span>
         </div>
+        <br>
         <div >
-            <label>Confirm Password</label>
+            <label style="float: left; width: 15%;" for="confirm_password">Xác nhận mật khẩu</label>
             <input type="password" name="confirm_password">
             <span><?php echo $confirm_password_err; ?></span>
         </div>
+        <br>
         <div>
             <input type="submit" value="Submit">
-            <a href="account.php">Cancel</a>
+            <a href="account.php">Huỷ</a>
         </div>
     </form>
 </body>

@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     //upload image
-    if(empty($name_err))
+    if(empty($name_err) && empty($identifyingCharacteristic_err) && empty($biologicalCharacteristic_err) && empty($habitat_err) && empty($worth_err) && empty($status_err)  && empty($class_err))
     {
         $target_dir = "uploads/".$name;
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -115,17 +115,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             } else {
                 $image_err = "Error";
             }
-        }
-    }
-
-    if(!empty($image_err))
-    {
-        if(empty(trim($_POST["imageLink"])))
-        {
-            $image_err = "Error";
-        } else{
-            $image_err = "";
-            $image = trim($_POST["imageLink"]);
         }
     }
     
@@ -230,11 +219,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <label for="image" style="float: left; width: 15%;">Chọn hình ảnh</label>
             <input type="file" name="image">
             <span><?php echo $image_err; ?></span>
-        </div>
-        <br>
-        <div>
-            <label for="imageLink" style="float: left; width: 15%;">Hoặc link ảnh</label>
-            <input type="text" name="imageLink" >
         </div>
         <br>
         <div>

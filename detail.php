@@ -52,9 +52,12 @@
             $query_string = "SELECT * FROM creature WHERE ID =".$_GET['id'];
             $query = mysqli_query($link, $query_string);
             $row = mysqli_fetch_assoc($query);
+            $query_string = "SELECT * FROM users WHERE ID =".$row['author'];
+            $query_user = mysqli_query($link, $query_string);
+            $row_user = mysqli_fetch_assoc($query_user);
             echo"<div id='detailTop'><img src='".$row['imageLink']."' id='detailImage'>";
             echo"Tên: ".$row['name']."<br><br>"."Lớp: ".$row['class']."<br><br>
-                Tác giả:".$row['author']."</div>";
+                Tác giả:".$row_user['username']."</div>";
             echo"<div id='content'>Đặc điểm nhận dạng:".$row["identifyingCharacteristic"]."<br><br>";
             echo "Sinh học, sinh thái:".$row["biologicalCharacteristic"]."<br><br>";
             echo "Phân bố:".$row["habitat"]."<br><br>";

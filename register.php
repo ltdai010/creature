@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } 
     else if(trim($_POST["username"]) == 'admin')
     {
-        $username_err = "not permited";
+        $username_err = "not permited"
     }
     else
     {

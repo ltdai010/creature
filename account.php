@@ -30,6 +30,10 @@ if(!isset($_SESSION["creature_loggedin"]) || $_SESSION["creature_loggedin"] !== 
         </div>
         <br>
         <div>
+            <a href="myPost.php">Bài đăng của bạn</a>
+        </div>
+        <br>
+        <div>
             <a href="reset-password.php">Đổi mật khẩu</a>
         </div>
         <br>
